@@ -1,1 +1,104 @@
-/* You can add global styles to this file, and also import other style files */
+/* ═══════════════════════════════════════════════════════
+   Global Styles — Para Ileny
+   Pastel Color System & Design Foundation
+   ═══════════════════════════════════════════════════════ */
+
+:root {
+  /* Pastel Palette */
+  --pastel-pink: #f8c8dc;
+  --pastel-pink-deep: #f2a6c4;
+  --pastel-lavender: #e6d5f3;
+  --pastel-lavender-deep: #d4b8e8;
+  --pastel-sky: #b5d8f7;
+  --pastel-sky-deep: #8ec5f0;
+  --pastel-peach: #fde2c8;
+  --pastel-peach-deep: #f9cbaa;
+  --pastel-mint: #c8f0e0;
+  --pastel-rose: #fce4ec;
+  --pastel-cream: #fef9f0;
+  --pastel-blush: #fdd5d1;
+
+  /* Neutrals */
+  --text-primary: #3d2c3e;
+  --text-secondary: #6b5070;
+  --text-light: #9b849e;
+  --white: #ffffff;
+  --white-translucent: rgba(255, 255, 255, 0.6);
+
+  /* Glass */
+  --glass-bg: rgba(255, 255, 255, 0.25);
+  --glass-border: rgba(255, 255, 255, 0.45);
+  --glass-shadow: rgba(200, 170, 200, 0.15);
+
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Lora', Georgia, serif;
+  --font-script: 'Dancing Script', cursive;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+}
+
+/* Reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--pastel-cream);
+
+  /* Animated gradient background */
+  background: linear-gradient(
+    135deg,
+    var(--pastel-pink) 0%,
+    var(--pastel-lavender) 25%,
+    var(--pastel-sky) 50%,
+    var(--pastel-peach) 75%,
+    var(--pastel-mint) 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 0%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 100%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--pastel-pink-deep);
+  border-radius: 3px;
+}
+
+/* Selection */
+::selection {
+  background: var(--pastel-pink);
+  color: var(--text-primary);
+}
